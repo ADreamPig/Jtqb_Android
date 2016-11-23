@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.ningsheng.jietong.View.ClearEditText
+        android:id="@+id/changeNickname_et"
+        android:background="@drawable/layer_line_top_bottom"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:textSize="@dimen/font_mid"
+        android:lines="1"
+        android:maxLength="15"
+        android:textColor="@color/font_black"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/font_gray"
+        android:layout_width="wrap_content"
+        android:text="2~8个字符，支持中文、英文和数字，不可使用特殊符号"
+        android:layout_height="wrap_content" />
+</LinearLayout>

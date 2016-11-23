@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_while"
+    android:orientation="vertical">
+
+    <com.ningsheng.jietong.Pull.MaterialRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true"
+        android:id="@+id/act_consume_detail_pull">
+
+    <com.ningsheng.jietong.View.PinnedHeaderListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+    </com.ningsheng.jietong.Pull.MaterialRefreshLayout>
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adapter_change_nameAndPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2313131"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/adapter_change_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="asdada"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/font_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/adapter_change_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/icon_danxuan" />
+</LinearLayout>

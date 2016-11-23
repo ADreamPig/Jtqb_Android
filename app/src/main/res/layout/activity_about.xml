@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ningsheng.jietong.View.ReboundScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_about" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_line_top_bottom"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="    安徽瑞祥资讯服务公司是青岛中财进口服务平台有限公司全资控股子公司，是安徽首家专门从事预付卡发行与受理的非金融第三方支付企业."
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="    我们是目前安徽省内最具权威的多用途卡公司。是省内首家预付卡公司，专业运营8年，与安徽省内600多家合作商户与银联及各大银行合作，终端数量第一、商户业态覆盖面第一、团队服务意识第一。"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layer_line_top_bottom"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="客服电话"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="400-887-1380"
+                    android:onClick="tel"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="客服邮箱"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="kefu@chinajtk.com"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="微信公众号"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="瑞祥支付资讯(jtk365)"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="QQ交流群"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="147807169"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.ningsheng.jietong.View.ReboundScrollView>

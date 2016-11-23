@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.ningsheng.jietong.Pull.MaterialRefreshLayout
+       android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_home_refresh">
+    <com.ningsheng.jietong.View.ReboundScrollView
+        android:id="@+id/fragment_home_srcollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/fragment_home_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_home_viewpager_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_fkm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/android_icon_licai"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:text="理财"
+                        android:textColor="@color/font_black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_gk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/icon_gk"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:text="购卡"
+                        android:textColor="@color/font_black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_kcz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/icon_kcz"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:text="卡绑定"
+                        android:textColor="@color/font_black" />
+                </LinearLayout>
+                :
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_kbd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/icon_kbd"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:text="充值"
+                        android:textColor="@color/font_black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_yecx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/icon_yecx"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:text="余额查询"
+                        android:textColor="@color/font_black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/fragment_home_dzq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/icon_dzq"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:text="电子券"
+                        android:textColor="@color/font_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_while"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fragmen_business_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/icon_huodong"
+                        android:drawablePadding="10dp"
+                        android:text="商户活动"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/font_big" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多  >" />
+
+                </LinearLayout>
+
+                <com.ningsheng.jietong.View.GridViewInScorllView
+                    android:id="@+id/fragment_home_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_while"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fragmen_business_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/icon_shangjia"
+                        android:drawablePadding="10dp"
+                        android:text="商户推荐"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/font_big" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多  >" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.ningsheng.jietong.View.ListViewInScrollView
+                android:id="@+id/fragment_home_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/color_while" />
+        </LinearLayout>
+
+    </com.ningsheng.jietong.View.ReboundScrollView>
+    </com.ningsheng.jietong.Pull.MaterialRefreshLayout>
+
+    <TextView
+        android:id="@+id/fragment_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EDA618"
+        android:gravity="center"
+        android:text="首页"
+        android:visibility="gone"
+        android:textColor="@color/color_while"
+        android:textSize="18sp" />
+</FrameLayout>

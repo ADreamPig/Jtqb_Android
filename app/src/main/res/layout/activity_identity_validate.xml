@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_line_top_bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="输入您的身份证号码，验证身份信息"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color" />
+
+        <EditText
+            android:id="@+id/identity_et_idcarc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:lines="1"
+            android:maxLength="18"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:text="下一步"
+        style="@style/button"
+        android:onClick="identityClick" />
+
+</LinearLayout>

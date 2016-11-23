@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!--<style name="MyAppTheme" parent="Theme.AppCompat.Light">-->
+                <!--<item name="windowActionBar">false</item>-->
+                <!--<item name="windowNoTitle">true</item>-->
+                <!--<item name="android:fitsSystemWindows">false</item>-->
+                <!--&lt;!&ndash;<item name="android:windowIsTranslucent">true</item>&ndash;&gt;-->
+                <!--&lt;!&ndash;<item name="android:windowIsTranslucent">false</item>&ndash;&gt;-->
+                <!--&lt;!&ndash;<item name="android:windowTranslucentNavigation">true</item>&ndash;&gt;-->
+                <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+                <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
+                <!--<item name="android:listDivider">@drawable/recycler_line</item>-->
+                <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--</style>-->
+
+        <!--<style name="MainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+                <!--&lt;!&ndash; API 19 theme customizations can go here. &ndash;&gt;-->
+                <!--&lt;!&ndash;<item name="android:windowTranslucentNavigation">false</item>&ndash;&gt;-->
+                <!--&lt;!&ndash;<item name="android:windowBackground">@android:color/transparent</item>&ndash;&gt;-->
+                <!--<item name="android:windowTranslucentStatus">true</item>-->
+                <!--<item name="android:fitsSystemWindows">true</item>-->
+        <!--</style>-->
+</resources>

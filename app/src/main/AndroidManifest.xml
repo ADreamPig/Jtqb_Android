@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ningsheng.jietong">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<uses-permission android:name="android.permission.READ_SMS" />-->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 手机震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 打电话-->
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required 一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <application
+        android:name=".App.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launchers"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--激光推送-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".Activity.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.ningsheng.jietong" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能-->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK 核心功能 since 1.8.0 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!--Required 显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined. 用户自定义的广播接收器-->
+        <!--<receiver-->
+        <!--android:name="您自己定义的Receiver"-->
+        <!--android:enabled="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash;Required 用户注册SDK的intent&ndash;&gt;-->
+        <!--<action android:name="cn.jpush.android.intent.UNREGISTRATION" />-->
+        <!--<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash;Required 用户接收SDK消息的intent&ndash;&gt;-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash;Required 用户接收SDK通知栏信息的intent&ndash;&gt;-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash;Required 用户打开自定义通知栏的intent&ndash;&gt;-->
+        <!--<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> &lt;!&ndash;Optional 用户接受Rich Push Javascript 回调函数的intent&ndash;&gt;-->
+        <!--<action android:name="cn.jpush.android.intent.CONNECTION" />&lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;-->
+        <!--<category android:name="${applicationId}" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- Required . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="2b8822be8ac6d876a21d2e56" /> <!-- </>值来自开发者平台取得的AppKey-->
+        ad098a9f7ac1c21e8da14e3c
+        <!--百度地图-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="9jCa5zvModfsXwPc1RKhGFPO" />
+        <!--   debug 8h05tT5si3sbpEVXdgPZQfBw-->
+        <!--   正式 9jCa5zvModfsXwPc1RKhGFPO-->
+        <!--友盟版本更新-->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56eb8f1be0f55ac191000073" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+
+        <!--捷通钱包-->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            ></activity>
+        <activity
+            android:name=".Activity.LaunchersActivity"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.WelcomeActivity" />
+        <activity android:name=".Activity.DrawPasswordActivity" />
+        <activity android:name=".Activity.AllActivityAct" />
+        <activity android:name=".Activity.AllBusinessAct" />
+        <activity android:name=".Activity.BusinessDetailAct" />
+        <activity
+            android:name=".Activity.MyCardActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".Activity.PersonalDataActivity" />
+        <activity android:name=".Activity.QRCodeActivity" />
+        <activity android:name=".Activity.CardDetailsActivity" />
+        <activity android:name=".Activity.RemoveBindActivity" />
+        <activity android:name=".Activity.InventedCertificateActivity" />
+        <activity android:name=".Activity.PayCardRecordActivity" />
+        <activity
+            android:name=".Activity.BuyCardFirstActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".Activity.BuyCardSecondActivity" />
+        <activity android:name=".Activity.PayActivity" />
+        <activity android:name=".Activity.TopUpActivity" />
+        <activity
+            android:name=".Activity.BindCardActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".Activity.QueryActivity" />
+        <activity android:name=".Activity.TicketActivity" />
+        <activity android:name=".Activity.ReportActivity" />
+        <activity android:name=".Activity.RecordDetilActivity" />
+        <activity android:name=".Activity.RecordACtivity" />
+        <activity android:name=".Activity.RepordFinishedAct" />
+        <activity android:name=".Activity.SearchActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.ForgetActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.RegisterSucceedActivity" />
+        <activity android:name=".Activity.UserInfoEditAct" />
+        <!--<activity android:name=".Activity.BuyCardFirstActivity" />-->
+        <!--<activity android:name=".Activity.BuyCardSecondActivity" />-->
+        <!--<activity android:name=".Activity.PayActivity" />-->
+        <!--<activity android:name=".Activity.TopUpActivity" />-->
+        <!--<activity android:name=".Activity.BindCardActivity" />-->
+        <!--<activity android:name=".Activity.QueryActivity" />-->
+        <!--<activity android:name=".Activity.TicketActivity" />-->
+        <activity
+            android:name=".Activity.MyAddressActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Activity.AddressDetailsActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".Activity.SafeSetupActivity" />
+        <activity android:name=".Activity.MoreActivity" />
+        <activity android:name=".Activity.BalanceActivity" />
+        <activity android:name=".Activity.RealNameActivity" />
+        <activity android:name=".Activity.AibumListActivity" />
+        <activity android:name=".Activity.AibumGridActivity" />
+        <activity android:name=".Activity.AibumGridsActivity" />
+        <activity android:name=".Activity.TrimCopyQqActivity" />
+        <activity android:name=".Activity.ChangePhoneActivity" />
+        <activity android:name=".Activity.FeedBackActivity" />
+        <activity android:name=".Activity.MapActivity" />
+        <activity android:name=".Activity.ProvinceActivity" />
+        <activity android:name=".Activity.CityActivity" />
+        <activity android:name=".Activity.AreaActivity" />
+        <activity android:name=".Activity.ConsumeDetailActivity" />
+        <activity android:name=".Activity.BillDetailActivity" />
+        <activity android:name=".Activity.ExTicketActivity" />
+        <activity android:name=".Activity.SelectCityActivity" />
+        <activity android:name=".Activity.ChangeNicknameActivity" />
+        <activity android:name=".Activity.ChangePasswordActivity" />
+        <activity android:name=".Activity.ChangePayPwActivity" />
+        <activity android:name=".Activity.GesturePassWordActivity" />
+        <activity android:name=".Activity.AboutActivity" />
+        <activity android:name=".Activity.IdentityValidateActivity" />
+        <activity android:name=".Activity.BlankActivityAct" />
+        <activity android:name=".Activity.ChangeAddressAct" />
+        <activity android:name=".Activity.ActivityActivity" />
+        <activity android:name=".Activity.ResetLoginPWDAct" />
+        <activity android:name=".Activity.BindSucceedActivity" />
+        <activity android:name=".AliPay.H5PayDemoActivity" />
+        <activity android:name=".Activity.RegisterXy" />
+        <activity android:name=".Activity.PermissionsActivity" />
+        <activity android:name=".Activity.RechargePhoneActivity"/>
+        <activity android:name=".Activity.LifePayActivity"/>
+        <activity android:name=".Activity.BroadTelActivity"/>
+        <activity android:name=".Activity.WEGActivity"/>
+        <activity android:name=".Activity.PayMentActivity"/>
+        <activity android:name=".Activity.PayAffirmActivity"/>
+        <activity android:name=".Activity.ListViewTestAct"/>
+        <activity
+            android:name=".Activity.LoginOutActivit"
+            android:launchMode="singleTask"
+            android:theme="@style/LoginOut.dialog" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <activity android:name=".Activity.FinanceActivity" />
+    </application>
+
+</manifest>

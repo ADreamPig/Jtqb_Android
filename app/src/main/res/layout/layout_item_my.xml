@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="12dp">
+
+
+    <ImageView
+        android:id="@+id/item_my_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launchers" />
+
+    <TextView
+        android:id="@+id/item_my_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/item_my_iv"
+        android:layout_toRightOf="@id/item_my_iv"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/font_small" />
+
+    <TextView
+        android:id="@+id/item_my_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/font_small" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/item_my_tv"
+        android:layout_marginTop="12dp"
+        android:background="@color/line_color" />
+</RelativeLayout>

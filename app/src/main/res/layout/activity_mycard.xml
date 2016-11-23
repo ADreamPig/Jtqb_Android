@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/act_mycard__fl"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/mycard_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mycard_linear_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_while"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_wodeka" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的卡"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/font_small" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/mycard_tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/icon_normall"
+                        android:gravity="center_vertical"
+                        android:text="更多"
+                        android:textColor="@color/color_gray"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <com.ningsheng.jietong.View.ListViewInScrollView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layer_line_top_bottom"
+                    android:divider="@null"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <RelativeLayout
+                    android:id="@+id/act_mycard__rv_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/mycard_iv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_tianjia" />
+
+                    <TextView
+                        android:id="@+id/mycard_tv_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/mycard_iv_add"
+                        android:drawableRight="@mipmap/icon_normall"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="绑定新卡"
+                        android:textColor="@color/color_gray"
+                        android:textSize="@dimen/font_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/mycard_tv_add"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_nodata" />
+</FrameLayout>

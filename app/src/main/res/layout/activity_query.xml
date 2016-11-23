@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_xuanzeka"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:text="选择卡"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioGroup
+            android:id="@+id/act_query_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_while"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/act_query_radiobutton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@mipmap/icon_bujimingka"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/selec_radiogroup_card"
+                android:padding="15dp"
+                android:text="不记名卡"
+                android:textSize="@dimen/font_mid" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <RadioButton
+                android:id="@+id/act_query_radiobutton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@mipmap/icon_jimingka"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/selec_radiogroup_card"
+                android:padding="15dp"
+                android:text="记名卡"
+                android:textSize="@dimen/font_mid" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_while"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_xuanzeka"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:text="选择卡"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_query_cardNo"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入要查询的捷通卡号"
+            android:padding="15dp"
+            android:inputType="number"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <EditText
+            android:id="@+id/act_query_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:visibility="gone"
+            android:hint="输入要查询的捷通卡卡密码"
+            android:padding="15dp"
+            android:textSize="@dimen/font_mid" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/act_query_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:text="预付卡初始密码为背后6位数字"
+        android:textSize="@dimen/font_small" />
+    <com.andexert.library.RippleView
+        android:id="@+id/act_bind_RippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/more2"
+        android:layout_margin="5dp"
+        rv_centered="true">
+    <Button
+        android:id="@+id/act_query_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button"
+        android:text="查询"
+        android:textColor="@color/color_while" />
+    </com.andexert.library.RippleView>
+</LinearLayout>

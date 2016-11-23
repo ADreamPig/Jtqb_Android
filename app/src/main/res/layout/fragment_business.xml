@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_while"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/app_title"-->
+    <!--/>-->
+    <LinearLayout
+        android:id="@+id/fragmen_business_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFEDA618"
+        android:layout_marginTop="@dimen/toolbar_margin_top"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/fragment_business_current"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_dingwei"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="定位中..."
+            android:textColor="@color/color_while"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/fragment_business_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_sousuo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_business_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/selector_popu_jiantou"
+                android:gravity="center"
+                android:text="全部商家"
+                android:textColor="@color/font_black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_business_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/icon_jt_boon"
+                android:gravity="center"
+                android:text="全城"
+                android:textColor="@color/font_black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_business_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/icon_jt_boon"
+                android:gravity="center"
+                android:text="排序"
+                android:textColor="@color/font_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_business_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.ningsheng.jietong.Pull.MaterialRefreshLayout
+        android:id="@+id/fragment_business_list_pull"
+        android:layout_width="match_parent"
+        app:isLoadMore="true"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/fragment_business_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_while" />
+    </com.ningsheng.jietong.Pull.MaterialRefreshLayout>
+</LinearLayout>

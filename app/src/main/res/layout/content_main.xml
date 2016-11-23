@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.ningsheng.jietong.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.ningsheng.jietong.MainActivity">
+        <FrameLayout
+            android:id="@+id/act_main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/act_main_radiogroup" />
+        <View
+            android:id="@+id/state_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/app_color" />
+
+        <RadioGroup
+            android:id="@+id/act_main_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_while"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp">
+
+            <RadioButton
+                android:id="@+id/act_main_radiobutton1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/selector_main_tab1"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="@color/font_black" />
+
+            <RadioButton
+                android:id="@+id/act_main_radiobutton2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/selector_main_tab2"
+                android:gravity="center"
+                android:text="钱包"
+                android:textColor="@color/font_black" />
+
+
+            <RadioButton
+                android:id="@+id/act_main_radiobutton3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/selector_main_tab3"
+                android:gravity="center"
+                android:text="商户"
+                android:textColor="@color/font_black" />
+
+            <RadioButton
+                android:id="@+id/act_main_radiobutton4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/selector_main_tab4"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/font_black"
+
+                />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/act_main_radiogroup"
+            android:background="@color/line_color" />
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换金额"
+            android:textSize="@dimen/font_mid" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_exticket_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="输入兑换金额"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="最低兑换金额为50元，且为整数"
+        android:textSize="11sp" />
+
+    <com.andexert.library.RippleView
+        android:id="@+id/act_exticket_RippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/more2"
+        android:layout_margin="5dp"
+        rv_centered="true">
+    <Button
+        android:id="@+id/act_exticket_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_messagecode_gary"
+        android:text="兑换支付"
+        android:textColor="@color/color_while" />
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

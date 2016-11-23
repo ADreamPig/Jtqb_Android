@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">捷通钱包</string>
+    <string name="action_settings">Settings</string>
+    <string name="ANDROID_LOLLIPOP_TRANSITIONNAME_FIRST">android_lollipop_transitionname_first</string>
+    <string name="change_paypw_title">（不建议设置连续的重复数字，如"000000"；或连续数字串，如：123456）</string>
+    <string name="string_help_text">当前应用缺少必要权限</string>
+    <integer-array name="material_colors">
+        <item>@color/material_red</item>
+        <item>@color/material_green</item>
+        <item>@color/material_blue</item>
+        <item>@color/material_yellow</item>
+    </integer-array>
+</resources>

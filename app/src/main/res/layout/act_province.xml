@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_while"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/act_province_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="当前城市"
+            android:visibility="gone"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/act_province_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="上海"
+            android:visibility="gone"
+            android:textSize="@dimen/font_mid"
+            android:textColor="@color/font_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/act_province_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="省市"
+            android:textSize="@dimen/font_mid"
+            android:textColor="@color/app_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <com.ningsheng.jietong.View.ListViewInScrollView
+            android:id="@+id/act_province_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+             />
+    </LinearLayout>
+</ScrollView>

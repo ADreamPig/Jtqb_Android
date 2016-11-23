@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/adapter_homeactivity_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/image4"/>
+    <TextView
+        android:id="@+id/adapter_homeactivity_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="哈根达斯满200送20"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/color_while"
+        android:background="#33000000"/>
+
+
+</RelativeLayout>

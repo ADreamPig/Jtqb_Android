@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1.填写收货信息"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2.购卡选择"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3.支付"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:background="@color/color_while"
+        android:src="@mipmap/icon_liucheng_1"/>
+    <LinearLayout
+        android:id="@+id/act_buycard_first_checkin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_while"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="收货信息"
+            android:textColor="@color/app_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/act_buycard_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张小白  134823829239"
+                android:textColor="@color/font_black" />
+
+            <TextView
+                android:id="@+id/act_buycard_first_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_buycard_first_name"
+                android:layout_marginTop="10dp"
+                android:text="上海长宁区延安西路2299号19楼"
+                android:textColor="@color/font_gray" />
+
+            <TextView
+                android:id="@+id/act_buycard_first_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="更改"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_mid" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/act_buycard_first_nocheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_while"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/shouhuoxinixi"
+            android:drawablePadding="8dp"
+            android:padding="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="收货信息"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/app_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_shouhuoren"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:textSize="@dimen/font_mid"
+                android:text="收货人" />
+
+            <EditText
+                android:id="@+id/act_buycard_first_addname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:background="@null"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/font_mid"
+                style="@null"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_shoujihaoma"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:textSize="@dimen/font_mid"
+                android:text="手机号码" />
+
+            <EditText
+                android:id="@+id/act_buycard_first_addmobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="number"
+                android:gravity="right"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/font_mid"
+               />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+        <LinearLayout
+            android:id="@+id/act_buycard_first_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_shengshidiqu"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:textSize="@dimen/font_mid"
+                android:text="省市地区" />
+
+            <TextView
+                android:id="@+id/act_buycard_first_provCityAddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:gravity="right"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/font_mid"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_xiangxidizhi"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:textSize="@dimen/font_mid"
+                android:text="详细地址" />
+
+            <com.ningsheng.jietong.View.ClearWriteEditText
+                android:id="@+id/act_buycard_first_adddetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:gravity="right"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/font_mid"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加到常用地址"
+            android:padding="10dp"
+            android:checked="true"
+            android:background="@color/background"
+            android:paddingLeft="20dp"
+            android:textColor="@color/font_gray"/>
+    </LinearLayout>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/act_login_RippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/more2"
+        android:layout_margin="5dp"
+
+        rv_centered="true">
+    <Button
+        android:id="@+id/act_buycard_first_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button"
+        android:text="下一步"
+        android:textSize="@dimen/font_big"
+        android:textColor="@color/color_while" />
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

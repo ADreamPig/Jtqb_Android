@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/act_weg_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_xiangxia"
+            android:padding="16dp"
+            android:text="合肥市AA自来水公司"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/act_weg_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_xiangxia"
+            android:padding="16dp"
+            android:text="后付费"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <EditText
+            android:id="@+id/act_weg_number"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入户号/缴费单号"
+            android:padding="16dp"
+            android:textSize="@dimen/font_mid" />
+    </LinearLayout>
+
+    <com.andexert.library.RippleView
+        rv_centered="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/more2">
+
+        <Button
+            android:id="@+id/act_weg_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="@drawable/shape_messagecode_gary"
+            android:text="下一步"
+            android:textColor="@color/color_while"
+            android:textSize="@dimen/font_mid" />
+    </com.andexert.library.RippleView>
+</LinearLayout>

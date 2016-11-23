@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/act_bill_busness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="乐购超市(大渡河路店)"
+            android:textColor="@color/font_black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/act_bill_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.00"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易行为"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+
+            <TextView
+                android:id="@+id/act_bill_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="消费"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/line_color"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易时间"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+
+            <TextView
+                android:id="@+id/act_bill_trantime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2016-3-1 14:33:17"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/line_color"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单号"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+
+            <TextView
+                android:id="@+id/act_bill_orderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2016-3-1 14:33:27"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_mid" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/act_userinfo_edit_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/act_userinfo_edit_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="实名登记"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/font_mid" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="进行实名认证可增加账户安全性，本软件不会向任何用户和机构透露您的信息，请放心填写"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_while"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真实姓名" />
+
+            <com.ningsheng.jietong.View.ClearWriteEditText
+                android:id="@+id/act_userinfo_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:maxLength="10"
+                android:text=""
+                android:background="@null" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_while"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证号码" />
+
+            <com.ningsheng.jietong.View.ClearWriteEditText
+                android:id="@+id/act_userinfo_edit_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:maxLength="20"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:background="@color/color_while"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_tianxie"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="设置六位支付密码（仅限数字）"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_mid" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <com.ningsheng.jietong.View.SecurityPasswordEditText
+                android:id="@+id/my_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:padding="10dp"
+                android:text="（不建议设置连续的重复数字，如'000000'；或连续的数字串，如：123456）"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/act_userinfo_edit_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_messagecode_gary"
+            android:text="确定"
+            android:textSize="20sp"
+            android:textColor="@color/color_while" />
+
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/color_while"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyTextColor="@color/color_black"
+            android:shadowColor="@color/line_color"
+            android:shadowRadius="1"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

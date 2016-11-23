@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/app_title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FFEDA617">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal|center"
+            android:lines="1"
+            android:text="预付卡详情"
+            android:textColor="#ffffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/button_backward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@mipmap/icon_back"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="15dp"
+            android:text="返回"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/button_forward"
+            android:layout_width="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@mipmap/gengduo_icon"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+           />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_item_mycard" />
+
+    <LinearLayout
+        android:id="@+id/carddetails_linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_line_top_bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="预付卡类型"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/carddetails_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="充值卡"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="余额"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/carddetails_tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0.00"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:onClick="cardDetailClick"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易明细"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_small" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/act_carddetails_toup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        android:visibility="gone"
+        android:background="@drawable/shape_button"
+        android:textColor="@color/color_while"
+        android:layout_margin="40dp"
+        />
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_while">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_tianxie"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:text="填写绑卡信息"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/font_mid" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.ningsheng.jietong.View.ClearWriteEditText
+        android:id="@+id/act_bindcard_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="30"
+        android:hint="输入要绑定的捷通卡卡号"
+        android:padding="15dp"
+        android:textSize="@dimen/font_mid" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.ningsheng.jietong.View.ClearWriteEditText
+        android:id="@+id/act_bindcard_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLength="30"
+        android:background="@null"
+        android:hint="输入要绑定的捷通卡密码"
+        android:password="true"
+        android:padding="15dp"
+        android:textSize="@dimen/font_mid" />
+</LinearLayout>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/act_bind_RippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/more2"
+        android:layout_margin="5dp"
+        rv_centered="true">
+    <Button
+        android:id="@+id/act_bindcard_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textColor="@color/color_while"
+        android:background="@drawable/shape_messagecode_gary"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+    </com.andexert.library.RippleView>
+</LinearLayout>

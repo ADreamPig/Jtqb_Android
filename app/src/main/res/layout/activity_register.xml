@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="手机号码"
+
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_mid" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_register_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="11"
+            android:hint="输入手机号码" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="验 证 码"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_mid" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_register_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:lines="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:hint="输入验证码"
+
+            />
+        <TextView
+            android:id="@+id/act_register_getcode"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:padding="10dp"
+            android:textColor="@color/color_while"
+            android:background="@drawable/shape_messagecode_yellow"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="登录密码"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_mid" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_register_pwd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="18"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+             />
+        <CheckBox
+            android:id="@+id/act_register_lookpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:button="@drawable/select_check_lookpw"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="验证码"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_mid" />
+
+        <com.ningsheng.jietong.View.ClearWriteEditText
+            android:id="@+id/act_register_valicode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:lines="1"
+            android:maxLength="10"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            />
+        <com.ningsheng.jietong.View.ValidationCode
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/register_validation_code"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:text="(6～16位、需要包含字母、数字或者字符至少两种组合，并且区分大小写，首字母必须为字母)"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+
+    <Button
+        android:id="@+id/act_register_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="@color/color_while" android:background="@drawable/shape_button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击“注册”，表示您已同意"/>
+<TextView
+    android:id="@+id/act_register_xieyi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="《捷通钱包注册协议》"
+    android:textColor="@color/font_blue"/>
+</LinearLayout>
+
+</LinearLayout>

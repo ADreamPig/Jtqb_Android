@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFEDA618</color>
+    <color name="colorPrimaryDark">#FFEDA618</color>
+    <color name="colorAccent">#FFFF4081</color>
+
+    <color name="color_while">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_gray">#ffcccccc</color>
+    <color name="line_color">#E6E6E6</color>
+    <color name="background">#F7F4F0</color>
+    <color name="app_color">#FFEDA618</color>
+
+    <color name="casas">#EDA618</color>
+    <color name="casass">#00EDA618</color>
+    <color name="font_black">#BB000000</color>
+    <color name="font_blue">#48A8F5</color>
+    <color name="font_gray">#B2B2B2</color>
+    <color name="font_red">#F72929</color>
+
+    <color name="material_red">#ffF44336</color>
+    <color name="material_green">#ff4CAF50</color>
+    <color name="material_blue">#ff03A9F4</color>
+    <color name="material_yellow">#ffFFEB3B</color>
+</resources>

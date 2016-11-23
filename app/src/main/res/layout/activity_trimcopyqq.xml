@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ningsheng.jietong.View.TrimCopyQq.TrimCopyQqImageView
+        android:id="@+id/trimCopyQq_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:transitionName="@string/ANDROID_LOLLIPOP_TRANSITIONNAME_FIRST" />
+
+    <io.codetail.widget.RevealFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ningsheng.jietong.View.TrimCopyQq.TrimCopyQqSrcView
+            android:id="@+id/trimCopyQq_Src"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+    </io.codetail.widget.RevealFrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:drawableRight="@mipmap/icon_xiangxia"
+        android:padding="16dp"
+        android:text="中国电信合肥分公司（瑶海区）"
+        android:textSize="@dimen/font_mid" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <EditText
+        style="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_while"
+        android:hint="输入固定电话号码（包括区号）"
+        android:padding="16dp"
+        android:textSize="@dimen/font_mid" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.andexert.library.RippleView
+        android:id="@+id/act_login_RippleView"
+        rv_centered="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/more2">
+
+        <Button
+            android:id="@+id/act_broad_tel_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="@drawable/shape_messagecode_gary"
+            android:text="下一步"
+            android:textColor="@color/color_while"
+            android:textSize="@dimen/font_mid" />
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

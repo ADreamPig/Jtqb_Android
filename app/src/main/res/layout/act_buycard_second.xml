@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_while"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1.填写收货信息"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2.购卡选择"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3.支付"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_while"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:src="@mipmap/icon_liucheng_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_while"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_xuanzeka"
+                android:drawablePadding="6dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="选择卡"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_mid" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <RadioGroup
+                android:id="@+id/act_buycard_second_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/act_buycard_second_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+
+                    android:drawableLeft="@mipmap/icon_bujimingka"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@drawable/selec_radiogroup_card"
+                    android:padding="10dp"
+                    android:text="不记名卡(面值卡)"
+
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <RadioButton
+                    android:id="@+id/act_buycard_second_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/icon_jimingka"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@drawable/selec_radiogroup_card"
+                    android:padding="10dp"
+                    android:text="记名卡(充值卡)"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <RadioButton
+                    android:id="@+id/act_buycard_second_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/icon_mianzhi"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@drawable/selec_radiogroup_card"
+                    android:padding="10dp"
+                    android:text="记名卡(面值卡)"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/font_small" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_buycard_sencond_module1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_while"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_shenfenxinxi"
+                android:drawablePadding="6dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="记名卡身份信息"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_mid" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_zhenshixingming"
+                    android:drawablePadding="6dp"
+                    android:padding="10dp"
+                    android:text="真实姓名" />
+
+                <EditText
+                    android:id="@+id/act_buycard_sencond_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_shenfenzhenghaoma"
+                    android:drawablePadding="6dp"
+                    android:padding="10dp"
+                    android:text="身份证号码" />
+
+                <EditText
+                    android:id="@+id/act_buycard_sencond_cardId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:text="" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_buycard_sencond_module2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_while"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_edu"
+                android:drawablePadding="6dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="面值卡额度"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/font_mid" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_buycard_sencond_value"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                />
+            <!--<HorizontalScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:scrollbars="none"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<com.ningsheng.jietong.View.HorizontalListView-->
+                    <!--android:id="@+id/act_buycard_sencond_value"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:paddingRight="20dp"-->
+                    <!--android:layout_gravity="center_vertical" />-->
+            <!--</HorizontalScrollView>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_buycard_sencond_module3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_shuliang"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="购卡数量"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/font_mid" />
+
+                <ImageView
+                    android:id="@+id/act_buycard_sencond_numsub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_jianshao" />
+
+                <EditText
+                    android:id="@+id/act_buycard_sencond_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_num_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="3"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="1" />
+
+                <ImageView
+                    android:id="@+id/act_buycard_sencond_numadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/icon_zengjia" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_jine"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="支付金额"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/font_mid" />
+
+                <TextView
+                    android:id="@+id/act_buycard_sencond_paySum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="￥100.00"
+                    android:textColor="@color/font_red" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_buycard_sencond_module4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_shuliang"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="购卡数量"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/font_mid" />
+
+                <ImageView
+                    android:id="@+id/act_buycard_sencond_numsub1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_jianshao" />
+
+                <EditText
+                    android:id="@+id/act_buycard_sencond_num1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_num_bg"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="1" />
+
+                <ImageView
+                    android:id="@+id/act_buycard_sencond_numadd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/icon_zengjia" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_jine"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="充值金额"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/font_mid" />
+
+                <EditText
+                    android:id="@+id/act_buycard_sencond_TopUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="￥100.00"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="4"
+                    android:textColor="@color/font_red" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="最低购买金额为100元，且为整数" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_while"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="支付金额"
+                    android:textSize="@dimen/font_mid" />
+
+                <TextView
+                    android:id="@+id/act_buycard_sencond_paySum1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:text="￥100.00"
+                    android:textColor="@color/app_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/act_login_RippleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/more2"
+            android:layout_margin="5dp"
+            rv_centered="true">
+        <Button
+            android:id="@+id/act_buycard_second_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button"
+            android:text="去支付"
+            android:textSize="@dimen/font_big"
+            android:textColor="@color/color_while" />
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+</ScrollView>

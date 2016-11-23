@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_while"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/act_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_color">
+
+        <ImageView
+            android:id="@+id/act_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_back" />
+
+        <EditText
+            android:id="@+id/act_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:hint="输入关键字搜索"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/color_while"
+            android:textColorHint="@color/color_while"
+            android:textSize="@dimen/font_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/act_search_edit"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@color/line_color" />
+
+        <ImageView
+            android:id="@+id/act_search_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_sousuo" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/act_search_frame"
+        android:background="@color/color_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

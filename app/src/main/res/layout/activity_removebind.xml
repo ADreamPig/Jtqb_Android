@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_line_top_bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:minWidth="50dp"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+            <TextView
+                android:id="@+id/removeBind_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:minWidth="50dp"
+                android:layout_height="wrap_content"
+                android:text="验  证  码"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+            <EditText
+                android:id="@+id/removeBind_et_yzm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:hint="请输入验证码"
+                android:background="@null"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_small" />
+            <TextView
+                android:id="@+id/removeBind_tv_yzm"
+                style="@style/button_small"
+                android:text="获取验证码" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/removeBind_next"
+        style="@style/button"
+        android:layout_marginTop="30dp"
+        android:text="确认解绑" />
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题栏"
+        android:textColor="#FF333333" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/material_1_linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/material_1_et"
+                android:layout_width="match_parent"
+                android:hint="请输入支付密码"
+                android:textSize="12sp"
+                android:inputType="numberPassword"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+
+            <View
+                android:id="@+id/material_1_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/material_1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="忘记支付密码？"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/material_1_linear2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码输入错误，请重新输入。"
+                android:textColor="#FF333333"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(还可输入4次，5次错误后账户将冻结24小时)"
+                android:textColor="@color/font_red"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="55dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="取消"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:gravity="center"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="确定"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+</LinearLayout>

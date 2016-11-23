@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_while"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_business_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/toolbar_margin_top"
+        android:background="@color/app_color"
+        android:gravity="center"
+        android:text="捷通钱包"
+        android:textColor="@color/color_while"
+        android:textSize="@dimen/font_big" />
+
+    <com.ningsheng.jietong.Pull.MaterialRefreshLayout
+        android:id="@+id/fragment_wallet_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_while"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:id="@+id/fragment_wallet_gk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_gk"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:text="购卡"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/font_small" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:id="@+id/fragment_wallet_kbd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_kbd"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:text="卡绑定"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/font_small" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:id="@+id/fragment_wallet_kcz"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_kcz"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:text="充值"
+                            android:textColor="@color/font_black" />
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+                        <TextView
+                            android:id="@+id/fragment_wallet_yecx"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_yecx"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="余额查询"
+                            android:textColor="@color/font_black" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+
+                        android:background="@color/line_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+                        <TextView
+                            android:id="@+id/fragment_wallet_jyjl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_jyjl"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="交易记录"
+                            android:textColor="@color/font_black" />
+
+
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+
+
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+                        <TextView
+                            android:id="@+id/fragment_wallet_gs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_gs"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="挂失"
+                            android:textColor="@color/font_black" />
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:id="@+id/fragment_wallet_sjcz"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_gs"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="手机充值"
+                            android:textColor="@color/font_black" />
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color" />
+                        <TextView
+                            android:id="@+id/fragment_wallet_shjf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@mipmap/icon_qb_gs"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="生活缴费"
+                            android:textColor="@color/font_black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_while"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/activity_mycard" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </com.ningsheng.jietong.Pull.MaterialRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_while"
+    android:orientation="vertical">
+
+    <com.ningsheng.jietong.Pull.MaterialRefreshLayout
+        android:id="@+id/act_record_lsit_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/act_record_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.ningsheng.jietong.Pull.MaterialRefreshLayout>
+</LinearLayout>
